@@ -33,7 +33,7 @@ public class TestExpedia {
 		  if(list.get(i).getText().contains("Kuala Lumpur (KUL - All Airports)")){
 			  list.get(i).click();
 			  break;
-		  }
+		 }
 	  }
 	  Thread.sleep(2000);
 	  driver.findElement(By.xpath("//button[@aria-label='Going to']")).click();
