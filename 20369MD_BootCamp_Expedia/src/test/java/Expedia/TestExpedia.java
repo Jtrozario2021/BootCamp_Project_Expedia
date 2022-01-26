@@ -62,23 +62,31 @@ public class TestExpedia {
 	  Thread.sleep(1000);
 	  driver.findElement(By.xpath("//button[@data-testid='submit-button']")).click();
 	  
-
 	  driver.findElement(By.xpath("//button[@class='uitk-card-link'][1]")).click();
 	  Thread.sleep(8000);
 	  driver.findElement(By.xpath("//button[@data-test-id='select-button']")).click();
-	  Thread.sleep(3000);
-
+	  Thread.sleep(6000);
+	  
+	  driver.findElement(By.xpath("//button[@class='uitk-card-link'][1]")).click();
+	  Thread.sleep(8000);
+	  driver.findElement(By.xpath("//button[@data-test-id='select-button']")).click();
+	  Thread.sleep(6000);
+	  
+	  driver.findElement(By.xpath("//button[@data-test-id='goto-checkout-button']")).click();
+	  Thread.sleep(5000);
+	  	  
 	  driver.findElement(By.id("firstname[0]")).sendKeys("Jerry");
 	  driver.findElement(By.id("lastname[0]")).sendKeys("Rozario");
 	  Thread.sleep(2000);
 	  driver.findElement(By.id("country_code[0]")).click();
 	  
 	  driver.findElement(By.id("phone-number[0]")).sendKeys("3564748765");
-	  driver.findElement(By.id("gender_mail[0]")).click();
+	  driver.findElement(By.xpath("//input[@id='confirmation-sms-provider-checkbox']")).click();
 	  
-	  
-	  
-
+	  driver.findElement(By.id("passport[0]")).click();
+	  driver.findElement(By.xpath("//option[text()='Bangladesh']")).click();
+	  driver.findElement(By.id("no_insurance")).click();
+	
   }
   
   @BeforeMethod
@@ -100,7 +108,7 @@ public class TestExpedia {
   @AfterMethod
   public void afterMethod() throws InterruptedException {
 	  Thread.sleep(10000);
-	  driver.close();
+	  //driver.close();
 	  
   }
 
